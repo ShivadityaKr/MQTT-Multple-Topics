@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "mqtt-nio",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sroebert/mqtt-nio.git",
+      "state" : {
+        "revision" : "ea796596d0d5675e6378c0e1ac1045bbe03301a4",
+        "version" : "2.6.2"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
+        "version" : "1.4.2"
+      }
+    },
+    {
+      "identity" : "swift-nio",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-nio.git",
+      "state" : {
+        "revision" : "124119f0bb12384cef35aa041d7c3a686108722d",
+        "version" : "2.40.0"
+      }
+    },
+    {
+      "identity" : "swift-nio-ssl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-nio-ssl.git",
+      "state" : {
+        "revision" : "c30c680c78c99afdabf84805a83c8745387c4ac7",
+        "version" : "2.20.2"
+      }
+    },
+    {
+      "identity" : "swift-nio-transport-services",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-nio-transport-services.git",
+      "state" : {
+        "revision" : "2cb54f91ddafc90832c5fa247faf5798d0a7c204",
+        "version" : "1.13.0"
+      }
+    }
+  ],
+  "version" : 2
+}
