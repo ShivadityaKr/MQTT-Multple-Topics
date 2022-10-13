@@ -155,3 +155,14 @@ extension MQTTManager {
         }
     }
 }
+extension MQTTManager {
+    func whenDisconnected(completion: @escaping ((Bool, Error?)-> Void)) {
+        self.client.whenDisconnected { error in
+            if let error {
+                completion(false,error)
+            } else {
+                completion(true,nil)
+            }
+        }
+    }
+}
