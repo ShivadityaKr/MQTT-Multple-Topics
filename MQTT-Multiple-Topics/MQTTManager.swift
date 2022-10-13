@@ -135,7 +135,7 @@ class MQTTManager: NSObject {
 }
 extension MQTTManager {
     func whenConnecting(completion: @escaping ((Bool, Error?)-> Void)) {
-        self.client.whenConnectionFailure { error in
+        self.client.whenConnecting { error in
             if let error {
                 completion(false,error)
             } else {
@@ -158,6 +158,17 @@ extension MQTTManager {
 extension MQTTManager {
     func whenDisconnected(completion: @escaping ((Bool, Error?)-> Void)) {
         self.client.whenDisconnected { error in
+            if let error {
+                completion(false,error)
+            } else {
+                completion(true,nil)
+            }
+        }
+    }
+}
+extension MQTTManager {
+    func whenConnectionFailure(completion: @escaping ((Bool, Error?)-> Void)) {
+        self.client.whenConnectionFailure { error in
             if let error {
                 completion(false,error)
             } else {
