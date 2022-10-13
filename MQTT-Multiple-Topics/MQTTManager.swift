@@ -133,3 +133,14 @@ class MQTTManager: NSObject {
         let clientID = "ClientID-" + String(ProcessInfo().processIdentifier)
     }
 }
+extension MQTTManager {
+    func whenConnecting(completion: @escaping ((Bool, Error?)-> Void)) {
+        self.client.whenConnectionFailure { error in
+            if let error {
+                completion(false,error)
+            } else {
+                completion(true,nil)
+            }
+        }
+    }
+}
