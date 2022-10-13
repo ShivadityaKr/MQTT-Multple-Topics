@@ -144,3 +144,14 @@ extension MQTTManager {
         }
     }
 }
+extension MQTTManager {
+    func whenConnected(completion: @escaping ((Bool, Error?)-> Void)) {
+        self.client.whenConnected { error in
+            if let error {
+                completion(false,error)
+            } else {
+                completion(true,nil)
+            }
+        }
+    }
+}
